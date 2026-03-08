@@ -39,18 +39,33 @@
   display: grid;
   grid-template-columns: 1fr 18fr 1fr;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  height: 100vh;
 }
 .frame {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 1.1rem;
+}
+.triangle a,
+.circle1 a,
+.circle2 a {
+  position: relative;
+  z-index: 2;
+}
+
+.triangle,
+.circle1,
+.circle2 {
+  overflow: visible;
 }
 .text-top {
   grid-column: 1 / -1;
   justify-self: center;
   align-self: end;
   white-space: nowrap;
-  padding: 1.5rem;
+
+  max-width: 95%; /* 1. Element needs a set width or max-width */
+  white-space: nowrap; /* 2. Prevents text from wrapping to a new line */
+  overflow: hidden;
 }
 
 .text-left {
@@ -60,6 +75,9 @@
   justify-self: start;
   white-space: nowrap;
   padding: 2rem;
+  max-width: 100%; /* 1. Element needs a set width or max-width */
+  white-space: nowrap; /* 2. Prevents text from wrapping to a new line */
+  overflow: hidden;
 }
 
 .text-right {
@@ -70,6 +88,9 @@
   justify-self: end;
   white-space: nowrap;
   padding: 2rem;
+  max-width: 100%; /* 1. Element needs a set width or max-width */
+  white-space: nowrap; /* 2. Prevents text from wrapping to a new line */
+  overflow: hidden;
   /* font-size: clamp(14px, 2vw, 28px); */
 }
 
@@ -80,17 +101,18 @@
   justify-self: center;
   align-self: first baseline;
   white-space: nowrap;
-  padding: 1.5rem;
+
   padding-bottom: 2rem;
+  max-width: 95%;
+  white-space: nowrap; /* 2. Prevents text from wrapping to a new line */
+  overflow: hidden;
   /* font-size: clamp(14px, 2vw, 28px); */
 }
 
 .background {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-
-  max-width: 100%;
-  height: 75vh;
+  height: 85vh;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   grid-template-rows: 1fr 1fr;
@@ -108,7 +130,7 @@
 .circle1 {
   grid-column: 2 / -1;
   grid-row: 1 / 2;
-  clip-path: circle(56.7% at 50% 1%);
+  clip-path: circle(61.9% at 50% 1%);
   background-color: #273573;
   max-width: 100%;
   display: grid;
@@ -117,7 +139,7 @@
   justify-items: center;
 }
 .circle2 {
-  clip-path: circle(56.7% at 50% 100%);
+  clip-path: circle(61.9% at 50% 100%);
   background-color: #2d4bff;
   max-width: 100%;
   stroke: rgb(96, 27, 27) 1px solid;
@@ -159,25 +181,53 @@
 
   width: 100%;
   height: 100%;
-
-  text-decoration: none;
 }
+.triangle a {
+  font-weight: 500;
+}
+
 @media (min-width: 950px) {
+  .text-bottom,
+  .text-top {
+    padding: 1rem;
+  }
+}
+.text-left,
+.text-right {
+  padding: 2rem;
+}
+.text-bottom {
+  align-self: start;
+  align-content: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  place-items: start;
+  place-self: start;
+  margin-top: 0;
 }
 @media (max-width: 860px) {
   .frame {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 0.5fr 6fr 0.5fr;
     grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    height: 100vh;
   }
-
+  .text-left,
+  .text-right,
+  .text-bottom,
+  .text-top {
+    padding: 1rem;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .background {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-
-    max-width: 100%;
-    height: 65vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     grid-template-rows: 1fr 1fr;
@@ -185,7 +235,7 @@
   .triangle {
     grid-column: 1 / -1;
 
-    clip-path: polygon(100% 0, 0 0, 0 54%);
+    clip-path: polygon(100% 0, 0 0, 0 48%);
     background-color: #e96a5f;
     display: grid;
     place-items: center;
@@ -193,27 +243,51 @@
   .circle1 {
     grid-column: 2 / -1;
     grid-row: 2 / 3;
-    clip-path: circle(59.9% at 85% 56%);
+    clip-path: circle(38.9% at 85% 50%);
     background-color: #273573;
     max-width: 100%;
     display: grid;
     place-items: center;
+    overflow: hidden;
   }
   .circle2 {
     grid-column: 1 / 2;
     grid-row: 2 / -1;
-    clip-path: circle(57.2% at 15% 55%);
+    clip-path: circle(38.4% at 15% 49%);
     background-color: #2d4bff;
     max-width: 100%;
     stroke: rgb(96, 27, 27) 1px solid;
     display: grid;
     place-items: center;
+    overflow: hidden;
   }
   .nav-link2 {
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 600;
+
     font-size: 1.3rem;
     letter-spacing: 2px;
+  }
+
+  .triangle a {
+    left: -6rem;
+    bottom: 8rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .circle1 a,
+  .circle2 a {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .text-left {
+    grid-row: 2 / 3;
+    writing-mode: vertical-rl;
+    justify-self: start;
+    white-space: nowrap;
+
+    max-width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }

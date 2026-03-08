@@ -6,8 +6,8 @@
   display: flex;
   justify-content: space-between;
   padding: 2rem 4rem;
-  size: 2rem;
-  font-size: 1.5rem;
+  size: 1.5rem;
+  font-size: 1.3rem;
   max-width: 1200px;
   display: flex;
   margin: auto;
@@ -18,6 +18,7 @@
   color: #1d3ada;
   font-weight: 500;
   font-family: "Roboto Condensed";
+  text-transform: uppercase;
 }
 
 .header a:hover {
@@ -30,5 +31,12 @@
 @media screen and (max-width: 700px) {
   .header a {
     font-size: 1.2rem;
+    gap: 1rem;
+  }
+  .header {
+    justify-content: space-between;
+    gap: 1rem;
+    margin: auto;
+    padding: 2rem 2rem;
   }
 }

@@ -1,47 +1,111 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  text-transform: upp;
+}
 .work-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 60vh;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 .work-left {
   display: grid;
-  place-items: center;
+
   position: relative;
-  margin-top: -5rem;
+  margin: 0 1rem;
 }
 .work-right {
   font-family: "Poppins", sans-serif;
   line-height: 1.7rem;
-  max-width: 400px;
+  max-width: 460px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  margin: 0 1rem;
 }
 .ladder {
   display: grid;
   justify-items: start;
   margin-left: 3rem;
   align-items: center;
-  transform: rotate(-15deg);
 }
 .slanted-line {
-  width: 8px;
-  height: 50vh;
+  transform: rotate(-15deg);
+  width: 12.2px;
+  height: 60vh;
   background: #1e2d6b;
 }
 .projects {
-  margin-top: -55vh; /* pulls text onto the line */
+  margin-top: -80vh; /* pulls text onto the line */
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
   padding-left: 2.5rem;
   font-family: "Roboto Condensed";
   font-size: 1.8rem;
+  cursor: pointer;
+}
+/* .project:hover {
+  color: #e96a5f;
+}
+.project:active {
+  color: #1d3ada;
+  transform: ;
+}
+.project:focus {
+  color: #e96a5f;
+  transform: ;
+} */
+.work-left {
+  position: relative;
+}
+.project {
+  transition: all 0.7s ease;
+}
+
+.project.active {
+  transform: translateX(20px);
+  color: #e96a5f;
+  font-weight: 600;
+  padding-right: 3rem;
+  max-width: 55px;
+}
+.ball {
+  position: absolute;
+  left: 5%;
+  top: 1%;
+  width: 55px;
+  height: 55px;
+  background: blue;
+  border-radius: 50%;
+  transition: top 0.1s ease, left 0.1s ease;
 }
 .work-right {
   opacity: 0;
-  transform: translateX(20px);
-  transition: 0.3s ease;
-}
 
+  transition: 0.3s ease;
+
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6rem;
+}
+.p {
+  font-family: "Poppins", sans-serif;
+}
+.tango1 {
+  padding-left: 1rem;
+}
+.bloom1 {
+  padding-left: 2.9rem;
+}
+.toki1 {
+  padding-left: 3.9rem;
+}
+.poetry1 {
+  padding-left: 4.9rem;
+}
 .work-right.active {
   opacity: 1;
   transform: translateX(0);
@@ -49,7 +113,24 @@
 .work-right {
   min-height: 300px;
 }
-
+@media screen and (min-width: 770px) {
+  .work-right {
+    font-size: 1.2rem;
+  }
+  .project.active {
+    font-size: 3rem;
+  }
+  .work-right a:link,
+  .work-right a:visited {
+    color: #fcfcfc;
+    text-decoration: none;
+    font-size: 1.4rem;
+    background-color: #ff6e61;
+    border-radius: 20rem;
+    margin-top: 2rem;
+    padding: 0.8rem;
+  }
+}
 @media (max-width: 768px) {
   .work-section {
     grid-template-columns: 1fr;
@@ -57,5 +138,19 @@
 
   .work-left {
     min-height: 70vh;
+  }
+  .work-right {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .project.active {
+    font-size: 2.5rem;
+  }
+  p {
+    size: 1rem;
   }
 }

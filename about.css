@@ -96,11 +96,11 @@ main {
     justify-content: center;
     align-items: center;
   }
-  a {
+  .work-right a:link {
     color: #ff6e61;
     font-size: 2rem;
   }
   .header {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }

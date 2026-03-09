@@ -22,3 +22,6 @@ h1 {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: normal;
 }
+body {
+  background-color: #fcfcfc;
+}

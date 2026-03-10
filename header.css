@@ -19,11 +19,13 @@
   font-weight: 500;
   font-family: "Roboto Condensed";
   text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 .header a:hover {
-  opacity: 0.6;
-  transition: 0.2s ease;
+  color: #ff6e61;
+  /* opacity: 0.6; */
+  transition: 0.2s ease-in-out;
   /* border: #1d3ada px solid;
   width: 30px;
   border-radius: 70%; */

@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <h3>The Solution</h3>
         <p>I designed and coded a minimal, 90s-inspired interface that allows each poem and image to stand independently. I collaborated with photographers to ensure visual coherence between text and imagery. Each section includes a voice note (MP3) of me reading a poem, adding intimacy and dimensionality to the experience. As a dedicated writer of poetry, this project highlights my strength in storytelling, tone, and conceptual cohesion — skills that strongly inform my design work.</p><br>
     
-       <br><a href="#" target="_blank">Visit Website</a>
+       <br><a href="https://milenemin.github.io/poetrywebsite-og/index.html" target="_blank">Visit Website</a>
       `,
     },
   };
@@ -81,8 +81,8 @@ leftSide.addEventListener("mousemove", (e) => {
   const y = e.clientY - rect.top;
   const percent = y / rect.height;
 
-  ball.style.top = `${percent * 80 + 10}%`;
-  ball.style.left = `${2 + percent * 31}%`;
+  ball.style.top = `${percent * 80 + 6}%`;
+  ball.style.left = `${2 + percent * 32.5}%`;
 });
 document.addEventListener("DOMContentLoaded", function () {
   const projects = document.querySelectorAll(".project");

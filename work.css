@@ -155,4 +155,18 @@ h1 {
   p {
     size: 1rem;
   }
+  .work-right a {
+    align-self: flex-start;
+  }
+  .work-right a:link,
+  .work-right a:visited {
+    color: #fcfcfc;
+    text-decoration: none;
+    font-size: 1.2rem;
+    background-color: #ff6e61;
+    border-radius: 20rem;
+    margin-top: 2rem;
+    padding-inline: 0.6rem;
+    padding-block: 0.6rem;
+  }
 }

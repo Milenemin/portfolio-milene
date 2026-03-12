@@ -38,6 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
         <br><a href="https://jest0003.github.io/gruppe_1_t8/index.html" target="_blank">Visit Website</a>
       `,
     },
+    toki: {
+      title: "Toki",
+      description: `
+        <h3>The Challenge</h3>
+        <p>Toki was a newly established B2B packaging company without existing cases or a defined visual identity. The challenge was to create a strong, credible brand presence and communicate their five-phase “Toki Flow” model.</p>
+    
+        <h3>The Solution</h3>
+       <p> I contributed by developing multiple interactive prototypes in Figma and refining the layout structure across key pages, including the Toki Flow model and case overview. Through iterative user testing, adjustments were made in regards to strengthening navigation clarity. </p><br>
+    
+        <br><a href="https://tokigruppe7.netlify.app/" target="_blank">Visit Website</a>
+      `,
+    },
     poetry: {
       title: "Poetry Website",
       description: `

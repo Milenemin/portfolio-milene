@@ -60,6 +60,7 @@
 .text-top {
   grid-column: 1 / -1;
   justify-self: center;
+  text-align: center;
   align-self: end;
   width: 100%;
   /* 1. Element needs a set width or max-width */
@@ -98,6 +99,7 @@
   grid-column: 1 / -1;
   grid-row: -1;
   justify-self: center;
+  text-align: center;
   align-self: first baseline;
 
   padding-bottom: 2rem;

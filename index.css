@@ -38,7 +38,7 @@
 .frame {
   display: grid;
   grid-template-columns: 1fr 18fr 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 85vh auto;
   height: 100vh;
 }
 .frame {
@@ -66,6 +66,53 @@
   /* 1. Element needs a set width or max-width */
   white-space: nowrap; /* 2. Prevents text from wrapping to a new line */
   overflow: hidden;
+  max-width: 90%;
+  /* animation: text-top-animation 20s linear infinite; */
+}
+/* @keyframes text-top-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */
+
+.text-bottom {
+  display: flex;
+  grid-column: 1 / -1;
+  grid-row: -1;
+  justify-self: center;
+  text-align: center;
+  align-self: first baseline;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  max-width: 90%;
+  white-space: nowrap; /* 2. Prevents text from wrapping to a new line */
+  overflow: hidden;
+  /* font-size: clamp(14px, 2vw, 28px); */
+}
+.text-top,
+.text-bottom {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.3rem;
+}
+.marquee {
+  display: flex;
+  max-width: 70%;
+  direction: right;
+  animation: scroll-right 14s linear infinite;
+}
+
+.marquee span {
+  padding-right: 0.5rem; /* spacing between repeats */
+}
+.marquee-bottom {
+  display: flex;
+  max-width: 70%;
+  direction: left;
+  animation: scroll-left 14s linear infinite;
 }
 
 .text-left {
@@ -73,7 +120,7 @@
   writing-mode: vertical-rl;
   text-align: center;
   justify-self: start;
-
+  font-size: 1.3rem;
   padding: 2rem;
   max-width: 100%; /* 1. Element needs a set width or max-width */
   white-space: nowrap; /* 2. Prevents text from wrapping to a new line */
@@ -86,27 +133,18 @@
   text-align: center;
   transform: rotate(180deg);
   justify-self: end;
-
+  font-size: 1.3rem;
   padding: 2rem;
   max-width: 100%; /* 1. Element needs a set width or max-width */
   white-space: nowrap; /* 2. Prevents text from wrapping to a new line */
   overflow: hidden;
   /* font-size: clamp(14px, 2vw, 28px); */
 }
-
-.text-bottom {
+.marquee-vertical {
   display: flex;
-  grid-column: 1 / -1;
-  grid-row: -1;
-  justify-self: center;
-  text-align: center;
-  align-self: first baseline;
+  flex-direction: row;
 
-  padding-bottom: 2rem;
-  max-width: 95%;
-  white-space: nowrap; /* 2. Prevents text from wrapping to a new line */
-  overflow: hidden;
-  /* font-size: clamp(14px, 2vw, 28px); */
+  animation: scroll-up 15s linear infinite;
 }
 
 .background {
@@ -191,6 +229,31 @@
   .text-top {
     padding: 1rem;
   }
+
+  @keyframes scroll-up {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-50%);
+    }
+  }
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes scroll-right {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
 }
 .text-left,
 .text-right {
@@ -209,15 +272,35 @@
 @media (max-width: 860px) {
   .frame {
     display: grid;
-    grid-template-columns: 0.5fr 6fr 0.5fr;
+    grid-template-columns: 0.3fr 8fr 0.3fr;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
+    margin: 0;
+  }
+
+  .text-left,
+  .text-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
   }
   .text-left,
   .text-right,
-  .text-bottom,
+  .text-bottom {
+    font-size: 1.2rem;
+    padding: 0rem 0rem;
+  }
   .text-top {
-    padding: 1rem;
+    padding-top: 1.5rem;
+
+    font-size: 1.2rem;
+  }
+
+  .text-bottom {
+    max-width: 80%;
+    text-align: center;
+    align-self: center;
   }
   main {
     display: flex;
@@ -231,11 +314,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 0.9rem;
   }
   .triangle {
     grid-column: 1 / -1;
 
     clip-path: polygon(100% 0, 0 0, 0 48%);
+    /* clip-path: polygon(4% 0, 5% 34%, 95% 0); */
     background-color: #e96a5f;
     display: grid;
     place-items: center;
@@ -285,8 +370,6 @@
     writing-mode: vertical-rl;
     justify-self: start;
     white-space: nowrap;
-
-    max-width: 75%;
     white-space: nowrap;
     overflow: hidden;
   }

@@ -34,3 +34,20 @@ h3 {
   font-family: "poppins", sans-serif;
   font-weight: 450;
 }
+/* body,
+div,
+h1,
+h2,
+h3,
+p,
+a,
+table,
+td,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+} */

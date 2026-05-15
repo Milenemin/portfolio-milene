@@ -30,6 +30,7 @@
   width: 30px;
   border-radius: 70%; */
 }
+
 @media screen and (max-width: 700px) {
   .header a {
     font-size: 1.2rem;

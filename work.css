@@ -55,9 +55,7 @@
   color: #e96a5f;
   transform: ;
 } */
-.work-left {
-  position: relative;
-}
+
 .project {
   transition: all 0.7s ease;
 }
@@ -77,11 +75,12 @@
   height: 55px;
   background: blue;
   border-radius: 50%;
-  .ball {
-  }
+
   transition: top 0.1s ease, left 0.1s ease;
 }
-
+h2 {
+  color: #1f1f1f;
+}
 .p {
   font-family: "Poppins", sans-serif;
 }
@@ -149,6 +148,9 @@
     margin-bottom: 0rem;
     margin-top: 10rem;
   }
+  h2 {
+    margin-bottom: 2rem;
+  }
   .work-bottom {
     font-size: 1.2rem;
     margin-top: 3rem;
@@ -178,7 +180,7 @@
   .project-grid {
     width: 100%;
     max-width: 85vw;
-    margin: 0;
+    margin-top: 5rem;
     gap: 7rem;
   }
   /* .top-content {
@@ -188,12 +190,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4.5rem;
-    margin-top: 1.5rem;
+    margin-top: 4.5rem;
+    margin-bottom: 8rem;
   }
   .grid-divider {
     grid-column: 1 / -1; /* stretches across all columns */
     border: none;
     border-top: 1.4px solid black;
+    margin: 0;
+  }
+  .grid-divider2 {
+    grid-column: 1 / -1; /* stretches across all columns */
+    border: none;
+    border-top: 4.5px solid rgb(23, 22, 22);
     margin: 0;
   }
   .work-bottom a {
@@ -219,8 +228,15 @@
     margin-bottom: 1rem;
   }
   .ball {
-    display: none;
+    position: absolute;
+    left: 11%;
+    top: 38%;
+    width: 40px;
+    height: 40px;
+    background: blue;
+    border-radius: 50%;
   }
+
   .projects {
     gap: 2.5rem;
     font-size: 1.6rem;
@@ -247,7 +263,7 @@
     font-size: 2rem;
   }
   .main-img {
-    margin-top: 5rem;
+    margin-top: 6rem;
   }
   p {
     size: 1rem;
@@ -255,6 +271,7 @@
   .work-bottom a {
     align-self: flex-start;
   }
+
   .work-bottom a:link,
   .work-bottom a:visited {
     color: #fcfcfc;
@@ -265,5 +282,9 @@
     margin-top: 2rem;
     padding-inline: 0.8rem;
     padding-block: 0.7rem;
+    margin-bottom: 2rem;
+  }
+  .grid-divider2 {
+    margin-top: 2rem;
   }
 }

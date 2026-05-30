@@ -42,14 +42,23 @@ h3 {
   font-size: 1.4rem;
   padding: 0.5rem 0rem;
 }
-
 .about {
+  margin: 0 auto;
+  padding: 2rem 5rem;
+  max-width: 80%;
+  padding-top: 0.8rem;
+}
+.chrome .about {
   margin: 0 auto;
   /* padding: 2rem 5rem; */
   max-width: 80%;
   line-height: 1.4rem;
   font-size: 1.1rem;
   padding-top: 0.8rem;
+}
+.firefox .about {
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 main {
@@ -70,11 +79,21 @@ main {
   .skills-content {
     font-size: 1.2rem;
   }
+  .about {
+    padding: 1rem 2rem;
+    max-width: 95%;
+    line-height: 1.7rem;
+    font-size: 1.1rem;
+  }
 }
 @media screen and (min-width: 850px) {
   h1 {
     font-size: 3rem;
     padding-top: 1rem;
+  }
+  .firefox p {
+    font-size: 1.3rem;
+    line-height: 2rem;
   }
   .page {
     display: grid;

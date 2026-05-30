@@ -66,4 +66,8 @@ main {
     width: 290px;
     height: 290px;
   }
+  .firefox p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
 }

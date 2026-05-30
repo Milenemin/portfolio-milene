@@ -47,5 +47,9 @@
     gap: 1rem;
     margin: auto;
     padding: 2rem 2rem;
+    max-width: 500px;
+  }
+  .firefox .header a {
+    font-size: 1.4rem;
   }
 }

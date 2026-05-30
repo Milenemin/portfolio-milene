@@ -13,9 +13,6 @@
   position: relative;
   margin: 0 1rem;
 }
-.work-bottom a :hover {
-  background-color: aqua;
-}
 
 .work-bottom {
   font-family: "Poppins", sans-serif;
@@ -49,9 +46,7 @@
 .firefox .projects {
   margin-top: -69vh;
 }
-.firefox .projects {
-  font-size: 2.5rem;
-}
+
 .projects {
   margin-top: -80vh; /* pulls text onto the line */
   display: flex;
@@ -161,6 +156,10 @@ h2 {
 }
 
 @media screen and (min-width: 770px) {
+  .text-content {
+    max-width: 95%;
+    margin: auto;
+  }
   .firefox p {
     font-size: 1.3rem;
     line-height: 2rem;
@@ -199,6 +198,12 @@ h2 {
   h2 {
     margin-bottom: 2rem;
   }
+  .projects {
+    font-size: 1.6rem;
+  }
+  .firefox .projects {
+    font-size: 2.5rem;
+  }
   .firefox .work-bottom {
     margin-top: 8em;
   }
@@ -227,9 +232,6 @@ h2 {
     font-size: 1.5rem;
   }
 
-  .firefox .work-section {
-    margin-bottom: 20rem;
-  }
   .work-bottom {
     margin-top: 30rem;
     display: flex;
@@ -253,7 +255,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
     gap: 4.5rem;
     margin-top: 4.5rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
   .grid-divider {
     grid-column: 1 / -1; /* stretches across all columns */
@@ -273,6 +275,7 @@ h2 {
     padding: 0.6rem 1rem;
     margin-top: 1rem;
   }
+
   .firefox .work-bottom a:hover {
     background-color: #ff6e61;
     transition: all 0.5s ease-in-out;
@@ -281,9 +284,9 @@ h2 {
     width: 0.6s ease-in-out;
     height: 0.6s ease-in-out;
 
-    width: 82px; /* Must match height */
-    height: 82px; /* Must match width */
-    padding: 28px; /* Prevents lopsided shapes */
+    width: 85px; /* Must match height */
+    height: 85px; /* Must match width */
+    padding: 35px; /* Prevents lopsided shapes */
     border-radius: 50%;
     line-height: normal;
     display: inline-block;
@@ -296,8 +299,8 @@ h2 {
     width: 0.6s ease-in-out;
     height: 0.6s ease-in-out;
     border-radius: 0.6s ease-out;
-    width: 55px; /* Must match height */
-    height: 55px; /* Must match width */
+    width: 62px; /* Must match height */
+    height: 62px; /* Must match width */
     padding: 28px; /* Prevents lopsided shapes */
     border-radius: 50%;
     line-height: normal;
@@ -306,6 +309,12 @@ h2 {
   }
 }
 @media (max-width: 768px) {
+  .project-grid {
+    margin-top: 5rem;
+  }
+  .firefox .projects {
+    font-size: 2rem;
+  }
   main {
     max-width: 300px;
     margin: 0 auto;
@@ -320,19 +329,29 @@ h2 {
   img {
     margin-bottom: 1rem;
   }
+  .projects {
+    font-size: 1rem;
+  }
   .ball {
     position: absolute;
-    left: 11%;
-    top: 38%;
+    left: 15%;
+    top: 25%;
     width: 40px;
     height: 40px;
     background: blue;
     border-radius: 50%;
   }
-
+  .firefox .ball {
+    position: absolute;
+    left: 11%;
+    top: 28%;
+    width: 40px;
+    height: 40px;
+    background: blue;
+    border-radius: 50%;
+  }
   .projects {
     gap: 2.5rem;
-    font-size: 1.6rem;
   }
   .work-section {
     margin-top: 7rem;

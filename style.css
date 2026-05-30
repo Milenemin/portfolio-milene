@@ -34,6 +34,11 @@ h3 {
   font-family: "poppins", sans-serif;
   font-weight: 450;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 /* body,
 div,
 h1,

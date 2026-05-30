@@ -47,7 +47,7 @@
   background: #1e2d6b;
 }
 .firefox .projects {
-  margin-top: -69vh;
+  margin-top: 79vh;
 }
 .firefox .projects {
   font-size: 2rem;
@@ -162,12 +162,12 @@ h2 {
 
 @media screen and (min-width: 770px) {
   .firefox p {
-    font-size: 1.3rem;
-    line-height: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
   }
   .firefox a:link {
-    padding: 1.3rem;
-    font-size: 1.8rem;
+    padding: 1rem;
+    font-size: 1.5rem;
   }
   .chrome p {
     font-size: 1.1rem;
@@ -197,7 +197,7 @@ h2 {
     margin-top: 10rem;
   }
   h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
   .firefox .work-bottom {
     margin-top: 8em;

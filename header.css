@@ -7,10 +7,16 @@
   justify-content: space-between;
   padding: 2rem 4rem;
   size: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   max-width: 1200px;
   display: flex;
   margin: auto;
+}
+.firefox .header {
+  max-width: 1400px;
+}
+.firefox .header a {
+  font-size: 2.9rem;
 }
 
 .header a {

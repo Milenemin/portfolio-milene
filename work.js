@@ -1,4 +1,6 @@
 // Ball follows mouse
+if (navigator.userAgent.includes("Firefox")) document.body.classList.add("firefox");
+if (navigator.userAgent.includes("Chrome")) document.body.classList.add("chrome");
 const ball = document.querySelector(".ball");
 const leftSide = document.querySelector(".work-scale");
 

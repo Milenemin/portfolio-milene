@@ -15,8 +15,12 @@ main {
 
 .imgs-info a {
   display: inline-block; /* Allows width/height to work */
-  width: 140px; /* Set your desired width */
-  height: 140px;
+  width: 170px; /* Set your desired width */
+  height: 170px;
+}
+.firefox .imgs-info a {
+  width: 250px;
+  height: 250px;
 }
 
 .imgs-info a img {
@@ -32,7 +36,6 @@ main {
   margin-bottom: 1.5rem;
 }
 .p-contact {
-  font-family: "Roboto Condensed";
   font-size: 1.1rem;
   font-weight: 400;
   padding-bottom: 2rem;
@@ -42,20 +45,25 @@ main {
 @media screen and (min-width: 750px) {
   h1 {
     margin-top: 4.5rem;
+    font-weight: 500;
+    font-size: 2.5rem;
   }
   .imgs-info {
     flex-direction: row;
     gap: 7rem;
   }
   .p-contact {
-    font-family: "Roboto Condensed";
     margin-top: 1.5rem;
     max-width: 690px;
     line-height: 1.7rem;
   }
-  .imgs-info a {
+  .chrome .imgs-info a {
     display: inline-block; /* Allows width/height to work */
     width: 160px; /* Set your desired width */
     height: 160px;
+  }
+  .firefox .imgs-info a {
+    width: 290px;
+    height: 290px;
   }
 }
